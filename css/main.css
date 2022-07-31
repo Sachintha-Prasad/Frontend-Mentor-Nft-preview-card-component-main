@@ -89,9 +89,17 @@ body {
   justify-content: space-between;
 }
 .card-container .value-time-container .eth-value {
-  font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: hsl(178deg, 100%, 50%);
+}
+.card-container .value-time-container .eth-value img {
+  width: 1.2rem;
 }
 .card-container .value-time-container .time {
   display: flex;
@@ -99,11 +107,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: hsl(215deg, 51%, 70%);
 }
 .card-container .value-time-container .time img {
-  width: 1.5rem;
+  width: 1.6rem;
 }
 .card-container .avatar-container {
   display: flex;
