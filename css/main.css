@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217deg, 54%, 11%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+}
+
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(216deg, 50%, 16%);
+  width: clamp(10rem, 90%, 35rem);
+  padding: 2.5em;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.card-container hr {
+  width: 100%;
+  height: 0.1rem;
+  background-color: hsl(215deg, 32%, 27%);
+}
+.card-container .main-img {
+  position: relative;
+}
+.card-container .main-img .nft-img {
+  width: min(100%, 30rem);
+  height: 100%;
+  border-radius: 1.5rem;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.card-container .main-img .nft-img:hover {
+  opacity: 0.2;
+}
+.card-container .main-img .view-icon-container {
+  z-index: -1;
+  position: absolute;
+  width: min(100%, 30rem);
+  height: 100%;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(178deg, 100%, 50%, 0.644);
+}
+.card-container .title {
+  font-size: 2.4rem;
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card-container .description {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: hsl(215deg, 51%, 70%);
+}
+.card-container .value-time-container {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-container .value-time-container .eth-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(178deg, 100%, 50%);
+}
+.card-container .value-time-container .time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+  color: hsl(215deg, 51%, 70%);
+}
+.card-container .value-time-container .time img {
+  width: 2rem;
+}
+.card-container .avatar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.card-container .avatar-container img {
+  max-width: 4rem;
+  border-radius: 50%;
+  border: 0.1rem solid hsl(0deg, 0%, 100%);
+}
+.card-container .avatar-container p {
+  font-size: 1.8rem;
+  color: hsl(215deg, 51%, 70%);
+}
+.card-container .avatar-container p span {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.card-container .avatar-container p span:hover {
+  color: hsl(178deg, 100%, 50%);
+}/*# sourceMappingURL=main.css.map */

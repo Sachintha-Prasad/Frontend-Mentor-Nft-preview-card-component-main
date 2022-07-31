@@ -1,0 +1,125 @@
+// scss file links 
+@import './reset';
+@import './variable';
+@import './mixin';
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+
+    position: relative;
+}
+
+.card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: $Very-dark-blue-card-BG;
+    width: clamp(10rem, 90%, 35rem);
+    padding: 2.5em;
+    border-radius: 1.5rem;
+
+    @include flex(column, flex-start, center);
+    gap: 2rem;
+    
+    
+    & hr {
+        width: 100%;
+        height: .1rem;
+        background-color: $Very-dark-blue-line;
+    }
+    
+    .main-img {     
+        position: relative;
+        
+        .nft-img {
+            width: min(100%, 30rem);
+            height: 100%;
+            border-radius: 1.5rem;
+            transition: .2s linear;
+            cursor: pointer;
+        }
+
+        .nft-img:hover {
+            opacity: .2;
+        }
+
+        .view-icon-container {
+            z-index: -1;
+            position: absolute;
+            width: min(100%, 30rem);
+            height: 100%;
+            border-radius: 1.5rem;
+            @include flex(row, center, center);
+
+            background-color: hsla(178, 100%, 50%, 0.644);
+        }
+    }
+
+    .title {
+        font-size: 2.4rem;
+        color: $Cyan;
+        cursor: pointer;
+    }
+    
+    .description {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: $Soft-blue;
+    }
+    
+    .value-time-container {
+        min-width: 100%;
+        @include flex(row, center, space-between);
+        
+        .eth-value {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $Cyan
+
+        }
+
+        .time {
+            @include flex(row, center, center);
+            gap: .5rem;
+            
+            font-size: 1.8rem;
+            color: $Soft-blue;
+            
+            & img {
+                width: 2rem;
+            }
+        }
+    }
+    
+    .avatar-container {
+        @include flex(row, center, center);
+        gap: 1rem;
+
+
+        & img {
+            max-width: 4rem;
+            border-radius: 50%;
+            border: .1rem solid $White;
+        }
+
+        & p {
+            font-size: 1.8rem;
+            color: $Soft-blue;
+
+            & span {
+                color: $White;
+                font-weight: 500;
+                transition: .2s linear;
+                cursor: pointer;
+            }
+
+            & span:hover {
+                color: $Cyan;
+            }
+        }
+    }
+
+}
