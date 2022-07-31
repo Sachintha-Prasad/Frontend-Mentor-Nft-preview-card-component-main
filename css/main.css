@@ -32,6 +32,7 @@ body {
   width: clamp(10rem, 90%, 35rem);
   padding: 2.5em;
   border-radius: 1.5rem;
+  box-shadow: 0 3rem 3rem 0.8rem hsl(217deg, 54%, 8%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,29 +45,28 @@ body {
   background-color: hsl(215deg, 32%, 27%);
 }
 .card-container .main-img {
-  position: relative;
-}
-.card-container .main-img .nft-img {
+  background: url("/images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: min(100%, 30rem);
-  height: 100%;
+  height: 30rem;
   border-radius: 1.5rem;
-  transition: 0.2s linear;
+  overflow: hidden;
   cursor: pointer;
 }
-.card-container .main-img .nft-img:hover {
-  opacity: 0.2;
-}
 .card-container .main-img .view-icon-container {
-  z-index: -1;
-  position: absolute;
-  width: min(100%, 30rem);
-  height: 100%;
-  border-radius: 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: hsla(178deg, 100%, 50%, 0.644);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: rgba(0, 255, 255, 0.63);
+}
+.card-container .main-img:hover .view-icon-container {
+  visibility: visible;
 }
 .card-container .title {
   font-size: 2.4rem;
